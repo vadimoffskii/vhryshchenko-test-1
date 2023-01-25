@@ -1,0 +1,53 @@
+@use "~ag-grid-community/styles" as ag;
+
+
+@include ag.grid-styles((theme:custom,
+    extend-theme: balham,
+    // --ag-secondary-foreground-color: #424242,
+    // --ag-background-color: rgb(255, 255, 255),
+    // --ag-header-background-color: #babfc7,
+    // --ag-row-hover-color: #473ad591,
+    // --ag-selected-row-background-color: #473ad5b9,
+    // --ag-data-color: #424242,
+    // --ag-foreground-color: #424242,
+    // --ag-odd-row-background-color: #ffffff,
+    // --ag-alpine-active-color: #473ad5a1,
+    --ag-font-size: 15px,
+  ));
+
+.grid-wrapper {
+  color: white;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  column-gap: 10px;
+
+  .grid {
+    flex: 0 0 79%;
+  }
+
+}
+
+.header {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: rgba(146, 151, 179, 0.69);
+
+  .header-button {
+    transition: all 0.3s ease-in-out;
+    flex: 0 0 10%;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover {
+      background-color: #f0effc99;
+    }
+  }
+}

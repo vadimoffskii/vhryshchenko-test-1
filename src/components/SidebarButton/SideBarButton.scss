@@ -1,0 +1,78 @@
+.side-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0effc;
+  height: 56px;
+  cursor: pointer;
+
+  &:first-child {
+    border-radius: 10px 0 0 0;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #babfc7;
+  }
+
+  .col-icon,
+  .row-icon {
+    width: 100%;
+
+    path {
+      stroke: #4b4b4b;
+    }
+  }
+
+  .col-icon-tooltip,
+  .row-icon-tooltip {
+    display: block;
+    color: black;
+    display: none;
+    position: absolute;
+    z-index: 20;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+
+  &:hover .col-icon-tooltip {
+    display: block;
+    top: 20px;
+    left: -50px;
+  }
+
+  &:hover .row-icon-tooltip {
+    display: block;
+    top: 20px;
+    left: -45px;
+  }
+
+  &:hover:not(.side-button-active) {
+    background-color: #f0effc;
+
+    .col-icon,
+    .row-icon {
+      path {
+        stroke: #2196f3;
+      }
+    }
+  }
+}
+
+.side-button.side-button-active {
+  background-color: #463ad4;
+
+  svg path {
+    stroke: #ffffff;
+  }
+}
+
+.side-buttons:has(.side-button-active)>:hover {
+  background-color: #f0effc;
+
+  .col-icon,
+  .row-icon path {
+    stroke: #2196f3;
+  }
+}

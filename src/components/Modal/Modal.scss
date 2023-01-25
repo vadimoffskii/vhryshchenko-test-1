@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 999;
+  padding: 40px 20px 20px;
+
+  .modal-content {
+    max-width: 1150px;
+    min-height: 300px;
+    border-radius: 5px;
+    padding: 10px 20px 20px;
+    box-shadow: 0 0 20px 4px rgb(6 3 37 / 16%);
+    background-color: #ebebeb;
+    color: black;
+
+    .modal-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .modal-close-btn {
+        cursor: pointer;
+        flex: 0 0 20px;
+        text-align: right;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
